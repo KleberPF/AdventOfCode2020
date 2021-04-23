@@ -29,7 +29,7 @@ int main()
     } while (num != NULL);
 
     int* values = malloc(sizeof *values * 30000000);
-    memset(values, -1, sizeof *values * 30000000);
+    memset(values, 0, sizeof *values * 30000000);
     for (int i = 1; i <= numberCount; ++i)
     {
         values[numbers[i - 1]] = i;
@@ -38,7 +38,7 @@ int main()
 
     for (int i = numberCount; i < STOP_NUMBER; ++i)
     {
-        if (values[currentValue] == -1)
+        if (values[currentValue] == 0)
         {
             values[currentValue] = i;
             currentValue = 0;
