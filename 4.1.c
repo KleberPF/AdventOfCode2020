@@ -27,7 +27,7 @@ int main()
     char value[20];
 
     int c;
-    while (!feof(f))
+    while (!feof(f)) // evil, I know
     {
         c = getc(f);
         if (c == '\n')
